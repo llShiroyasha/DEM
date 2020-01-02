@@ -2,6 +2,9 @@ import FreeCAD, Part, math
 from FreeCAD import Base
 from pivy import coin
 from FreeCAD import Vector
+import sys
+from PySide import QtGui
+
 
 class PartFeature:
 	def __init__(self, obj):
