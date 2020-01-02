@@ -45,8 +45,6 @@ class DEMWorkbench(Workbench):
         self.appendToolbar("Converter",list)
         self.appendToolbar("CAD",list1)
 
-
-
     def GetClassName(self):
         return "Gui::PythonWorkbench"
 
