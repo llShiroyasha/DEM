@@ -377,8 +377,7 @@ MATERIALFILE: Wall
 			os.rename(dir_+"/"+FreeCAD.getDocument(ap).getObject("Box0"+n).Label+".txt",dir_+"/"+FreeCAD.getDocument(ap).getObject("Box0"+n).Label+".WOBJ")
 			j=j+1
 
-Box = box()
-Box.exec_()
+box()
 
 def rectangle():
 	if App.ActiveDocument.Name == "Unnamed":
@@ -821,4 +820,5 @@ Center = """+f+""" """+z+""" """+p
 			WOBJ.write(Sphere)
 			WOBJ.close()
 			os.rename(dir_+"/"+FreeCAD.getDocument(ap).getObject("Sphere0"+n).Label+".txt",dir_+"/"+FreeCAD.getDocument(ap).getObject("Sphere0"+n).Label+".WOBJ")
-sphere()
+Maker = sphere()
+exec_
