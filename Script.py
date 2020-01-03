@@ -7,5 +7,16 @@ class WOBJ:
         return True
     def GetResources(self):
         return {'Pixmap':'', 'MenuText': 'FCStd > WOBJ converter', 'ToolTip':'FCStd to WOBJ Converter'}
+        
+        
+class POBJ:
+    def Activated(self):
+        import demconverters.FCStdPOBJconverter as FCStdPOBJconverter
+    def IsActive(self):
+        return True
+    def GetResources(self):
+        return {'Pixmap':'', 'MenuText':'FCStd > VOBJ Converter','ToolTip':'FCStd to VOBJ Converter'}
        
 FreeCADGui.addCommand('WOBJ', WOBJ())
+FreeCADGui.addCommand('POBJ', POBJ())
+
