@@ -41,7 +41,7 @@ class DEMWorkbench(Workbench):
         import Script
         import CAD
         import worldgui
-        list = ["WOBJ", "POBJ"]
+        list = ["WOBJ", "POBJ", "VOBJ", "Material"]
         list1 = ["Cube", "Sphere", "Rectangle", "Cylinder"]
         list2 = ["World"]
         self.appendToolbar("Converter",list)
