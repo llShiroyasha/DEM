@@ -820,5 +820,6 @@ Center = """+f+""" """+z+""" """+p
 			WOBJ.write(Sphere)
 			WOBJ.close()
 			os.rename(dir_+"/"+FreeCAD.getDocument(ap).getObject("Sphere0"+n).Label+".txt",dir_+"/"+FreeCAD.getDocument(ap).getObject("Sphere0"+n).Label+".WOBJ")
+            
 Maker = sphere()
-exec_
+Maker()
