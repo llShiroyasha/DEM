@@ -1,6 +1,11 @@
 from PySide import QtGui, QtCore
 from PySide.QtGui import QListWidget
 import os
+import platform
+import FreeCAD, FreeCADGui
+
+App=FreeCAD
+Gui=FreeCADGui
 
 dir_ = QtGui.QFileDialog.getExistingDirectory(None, 'Select a folder:', 'C:\\', QtGui.QFileDialog.ShowDirsOnly)
 os.chdir(dir_)
