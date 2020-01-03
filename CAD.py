@@ -6,7 +6,7 @@ class Cube:
     def IsActive(self):
         return True
     def GetResources(self):
-        return {'Pixmap':'', 'MenuText': 'Box', 'ToolTip':'Make a box'}
+        return {'Pixmap':'Part_Box', 'MenuText': 'Box', 'ToolTip':'Make a box'}
         
 class Sphere:
     def Activated(self):
@@ -14,7 +14,7 @@ class Sphere:
     def IsActive(self):
         return True
     def GetResources(self):
-        return {'Pixmap':'', 'MenuText': 'Sphere', 'ToolTip':'Make a sphere'}
+        return {'Pixmap':'Part_Sphere', 'MenuText': 'Sphere', 'ToolTip':'Make a sphere'}
         
 class Rectangle:
     def Activated(self):
@@ -22,7 +22,7 @@ class Rectangle:
     def IsActive(self):
         return True
     def GetResources(self):
-        return {'Pixmap':'', 'MenuText': 'Rectangle', 'ToolTip':'Make a rectangle'}
+        return {'Pixmap':'Draft_Rectangle', 'MenuText': 'Rectangle', 'ToolTip':'Make a rectangle'}
         
 class Cylinder:
     def Activated(self):
@@ -30,7 +30,7 @@ class Cylinder:
     def IsActive(self):
         return True
     def GetResources(self):
-        return {'Pixmap':'', 'MenuText': 'Cylinder', 'ToolTip':'Make a cylinder'}
+        return {'Pixmap':'Part_Cylinder', 'MenuText': 'Cylinder', 'ToolTip':'Make a cylinder'}
        
 FreeCADGui.addCommand('Cube', Cube())
 FreeCADGui.addCommand('Sphere', Sphere())
