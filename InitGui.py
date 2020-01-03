@@ -40,10 +40,13 @@ class DEMWorkbench(Workbench):
     def Initialize(self):
         import Script
         import CAD
+        import worldgui
         list = ["WOBJ", "POBJ"]
         list1 = ["Cube", "Sphere", "Rectangle", "Cylinder"]
+        list2 = ["World"]
         self.appendToolbar("Converter",list)
         self.appendToolbar("CAD",list1)
+        self.appendToolbar("World", list2)
 
     def GetClassName(self):
         return "Gui::PythonWorkbench"
