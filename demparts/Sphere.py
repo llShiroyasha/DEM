@@ -47,5 +47,4 @@ def makeSphere():
 	Sphere(a)
 	ViewProviderSphere(a.ViewObject)
 
-Maker = makeSphere()
-Maker.exec_()
+exec(makeSphere())
