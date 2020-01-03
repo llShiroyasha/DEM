@@ -40,7 +40,7 @@ class DEMWorkbench(Workbench):
     def Initialize(self):
         import Script
         import CAD
-        list = ["WOBJ"]
+        list = ["WOBJ", "POBJ"]
         list1 = ["Cube", "Sphere", "Rectangle", "Cylinder"]
         self.appendToolbar("Converter",list)
         self.appendToolbar("CAD",list1)
