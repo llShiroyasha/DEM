@@ -38,4 +38,3 @@ FreeCADGui.addCommand('WOBJ', WOBJ())
 FreeCADGui.addCommand('POBJ', POBJ())
 FreeCADGui.addCommand('VOBJ', VOBJ())
 FreeCADGui.addCommand("Material",Material())
-
