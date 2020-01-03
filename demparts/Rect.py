@@ -49,5 +49,4 @@ def MakeRect():
     FreeCAD.ActiveDocument.recompute()
 
 
-Maker = MakeRect()
-Maker.exec_()
+exec(MakeRect())
