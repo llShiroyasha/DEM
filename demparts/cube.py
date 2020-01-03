@@ -57,10 +57,12 @@ class ViewProviderBox:
 	def __init__(self, obj):
 		obj.Proxy = self
 
-def makeBox():
-	a=FreeCAD.ActiveDocument.addObject("Part::FeaturePython","Box")
-	Box(a)
-	ViewProviderBox(a.ViewObject)
+def makeBox(self):
+	self.a=FreeCAD.ActiveDocument.addObject("Part::FeaturePython","Box")
+	Box(self.a)
+	ViewProviderBox(self.a.ViewObject)
 
-Maker = makeBox()
-Maker.exec_()
+
+Maker = makeBox(Box)
+print(Maker.exec_)
+
