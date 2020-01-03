@@ -11,7 +11,7 @@ class WOBJ:
         
 class POBJ:
     def Activated(self):
-        import demconverters.FCStdPOBJconverter as FCStdPOBJconverter
+        import demconverters.FCstdPOBJconverter as FCstdPOBJconverter
     def IsActive(self):
         return True
     def GetResources(self):
