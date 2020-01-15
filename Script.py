@@ -6,7 +6,7 @@ class WOBJ:
     def IsActive(self):
         return True
     def GetResources(self):
-        return {'Pixmap':'', 'MenuText': 'FCStd > WOBJ converter', 'ToolTip':'FCStd to WOBJ Converter'}
+        return {'Pixmap':'E:\Programmes x86\FreeCAD 0.18\data\Mod\DEM\Resources\icon\W', 'MenuText': '', 'ToolTip':'FCStd to WOBJ Converter'}
         
         
 class POBJ:
@@ -15,7 +15,7 @@ class POBJ:
     def IsActive(self):
         return True
     def GetResources(self):
-        return {'Pixmap':'', 'MenuText':'FCStd > POBJ Converter','ToolTip':'FCStd to POBJ Converter'}
+        return {'Pixmap':'E:\Programmes x86\FreeCAD 0.18\data\Mod\DEM\Resources\icon\P','MenuText': '','ToolTip':'FCStd to POBJ Converter'}
         
 class VOBJ:
     def Activated(self):
@@ -23,7 +23,7 @@ class VOBJ:
     def IsActive(self):
         return True
     def GetResources(self):
-        return {'Pixmap':'', 'MenuText':'FCStd > VOBJ Converter','ToolTip':'FCStd to VOBJ Converter'}
+        return {'Pixmap':'E:\Programmes x86\FreeCAD 0.18\data\Mod\DEM\Resources\icon\V','MenuText': '','ToolTip':'FCStd to VOBJ Converter'}
     
         
 class Material:
@@ -32,7 +32,7 @@ class Material:
     def IsActive(self):
         return True
     def GetResources(self):
-        return {'Pixmap':'', 'MenuText':'FCStd > Material', "ToolTip":"FCStd to Material files"}
+        return {'Pixmap':'E:\Programmes x86\FreeCAD 0.18\data\Mod\DEM\Resources\icon\M','MenuText': '','ToolTip':'FCStd to VOBJ Converter'}
        
 FreeCADGui.addCommand('WOBJ', WOBJ())
 FreeCADGui.addCommand('POBJ', POBJ())
