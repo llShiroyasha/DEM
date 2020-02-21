@@ -565,10 +565,12 @@ class Test(QtGui.QDialog):
 		self.popup4.addItems(self.popupItems4)
 		self.popup4.activated[str].connect(self.onPopup4)
 		self.popup4.move(210,575)
+		
 		self.popup5 = QtGui.QComboBox(self)
 		self.popup5.addItems(self.popupItems4)
 		self.popup5.activated[str].connect(self.onPopup5)
 		self.popup5.move(210,605)
+		
 		self.popup6 = QtGui.QComboBox(self)
 		self.popup6.addItems(self.popupItems4)
 		self.popup6.activated[str].connect(self.onPopup6)
@@ -1140,7 +1142,8 @@ class Test(QtGui.QDialog):
 	def onReset1(self):
 		self.result         = userReset
 		self.label2.setText("                                                                                                                  ", self)
-		del listWOBJ
+		listWOBJ.clear()
+		
 
 	def onOk(self):
 		self.result			= userOK
