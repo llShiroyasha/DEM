@@ -1157,7 +1157,7 @@ userOK= "OK"
 form = Test()
 form.exec_()
 
-class FluidSimu(QtGui.QDailog):
+class FluidSimu(QtGui.QDialog):
 	def __init__(self):
 		super(FluidSimu, self).__init__()
 		self.initUI()
