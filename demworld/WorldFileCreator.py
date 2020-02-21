@@ -643,7 +643,7 @@ class Test(QtGui.QDialog):
 
 		if d1==None:
 			print("Cynlinder doesn't exist")
-		elif Gui.Selection.isSelected(App.getDocument(ap).getObject("Cylinder"))==true:
+		elif Gui.Selection.isSelected(App.getDocument(ap).getObject("Cylinder"))==True:
 			list.append(FreeCAD.ActiveDocument.Cylinder.Label)
 		j=0
 		for j in range (0,100):
