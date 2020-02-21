@@ -39,7 +39,7 @@ class Test(QtGui.QDialog):
 		self.label1.move(50,30)
 		self.label2 = QtGui.QLabel("                                                                                                                  ", self)
 		self.label2.move(150, 60)
-		self.label3 = QtGui.QLabel("Your WOBJ file is:",self)
+		self.label3 = QtGui.QLabel("Your WOBJ file are:",self)
 		self.label3.move(50,60)
 		self.Label4 = QtGui.QLabel("Speed",self)
 		self.Label4.move(50,90)
@@ -753,6 +753,7 @@ class Test(QtGui.QDialog):
 		cancelButton.clicked.connect(self.onCancel)
 		cancelButton.setAutoDefault(True)
 		cancelButton.move(500, 950)
+        
 		# OK button
 		okButton = QtGui.QPushButton('OK', self)
 		okButton.clicked.connect(self.onOk)		
@@ -760,9 +761,9 @@ class Test(QtGui.QDialog):
 		okButton.move(600, 950)
 
 		#Reset button
-		#resetButton = QtGui.QPushButton("Reset", self)
-		#resetButton.clicked.connect(self.onReset)
-		#resetButton.move(370 , 950)
+		resetButton = QtGui.QPushButton("Reset", self)
+		resetButton.clicked.connect(self.onReset1)
+		resetButton.move(300 , 25)
 
 		# set up pop-up menu
 		self.popup1 = QtGui.QComboBox(self)
@@ -1135,6 +1136,11 @@ class Test(QtGui.QDialog):
 	def onCancel(self):
 		self.result			= userCancelled
 		self.close()
+      
+	def onReset1(self):
+		self.result         = userReset
+		self.label2.setText("                                                                                                                  ", self)
+		del listWOBJ
 
 	def onOk(self):
 		self.result			= userOK
@@ -1149,10 +1155,11 @@ class Test(QtGui.QDialog):
 			else:
 				self.close()
 			n+=1
-
-
+            
+            
 userCancelled= "Cancelled"
 userOK= "OK"
+userReset = "Reset"
 
 form = Test()
 form.exec_()
@@ -1206,15 +1213,18 @@ class FluidSimu(QtGui.QDialog):
 		self.Freq.setText("0.0")
 		self.Freq.setFixedWidth(90)
 		self.Freq.move(210,195)
+        
 		#Cancel button
 		cancelButton = QtGui.QPushButton('Cancel', self)
 		cancelButton.clicked.connect(self.onCancel)
 		cancelButton.setAutoDefault(True)
 		cancelButton.move(150, 250)
 		# OK button
+        
 		okButton = QtGui.QPushButton('OK', self)
 		okButton.clicked.connect(self.onOk)
 		okButton.move(260, 250)
+        
 
 	def onCancel(self):
 		self.result			= userCancelled
