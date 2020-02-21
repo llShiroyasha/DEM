@@ -12,6 +12,3 @@ Put the folder DEM-Ressources in FreeCAD 0.18\Data\Mod.
 -Make some tabs for World GUI: Not started yet
 -Add the SPH on the World GUI: Work in progress
 -Draw Icons: DONE
-
-
-
