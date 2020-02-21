@@ -676,6 +676,7 @@ def MatConv():
         pass        
     elif Gui.Selection.isSelected(App.getDocument(ap).getObject("Cylinder"))== True:
         MatCyl()
+        
     if App.getDocument(ap).getObject("Sphere")==None:
         pass
     elif Gui.Selection.isSelected(App.getDocument(ap).getObject("Sphere"))== True:
