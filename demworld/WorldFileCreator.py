@@ -792,7 +792,7 @@ class Test(QtGui.QDialog):
 		okButton.move(600, 950)
 
 		#Reset button
-		resetButton = QtGui.QPushButton("Reset", self)
+		resetButton = QtGui.QPushButton("Reset WOBJ", self)
 		resetButton.clicked.connect(self.onReset1)
 		resetButton.move(300 , 25)
 
@@ -1169,9 +1169,11 @@ class Test(QtGui.QDialog):
 		self.close()
       
 	def onReset1(self):
-		self.result         = userReset
+		self.result         = userReset1
 		self.label2.setText("                                                                                                                  ", self)
+		print(listWOBJ)
 		listWOBJ.clear()
+		print(listWOBJ)
 		
 
 	def onOk(self):
@@ -1191,7 +1193,7 @@ class Test(QtGui.QDialog):
             
 userCancelled= "Cancelled"
 userOK= "OK"
-userReset = "Reset"
+userReset1 = "Reset"
 
 form = Test()
 form.exec_()
