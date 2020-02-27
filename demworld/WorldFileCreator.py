@@ -21,7 +21,7 @@
 # *                                                                         *
 # *   Made during my internship in South Africa                             *
 # *   Director of my internship: Pr. Daniel N. Wilke                        *
-# *   Tutor in France: Pr. Patrick Pizette                                  *       
+# *   Tutor in France: Pr. Patrick Pizette                                  *
 # *                                                                         *
 # *   Robin PORQUET 2019                                                    *
 # ***************************************************************************
@@ -268,7 +268,7 @@ class Test(QtGui.QDialog):
 		self.label2000.move(610,730)
 
 		self.label95 = QtGui.QLabel("------------------------------------------------------------------------------------------",self)
-		self.label95.move(390,864)		
+		self.label95.move(390,864)
 		self.label94 = QtGui.QLabel("LOADPROFILE",self)
 		self.label94.move(390,880)
 
@@ -594,18 +594,18 @@ class Test(QtGui.QDialog):
 		self.popup4.addItems(self.popupItems4)
 		self.popup4.activated[str].connect(self.onPopup4)
 		self.popup4.move(210,575)
-		
+
 		self.popup5 = QtGui.QComboBox(self)
 		self.popup5.addItems(self.popupItems4)
 		self.popup5.activated[str].connect(self.onPopup5)
 		self.popup5.move(210,605)
-		
+
 		self.popup6 = QtGui.QComboBox(self)
 		self.popup6.addItems(self.popupItems4)
 		self.popup6.activated[str].connect(self.onPopup6)
 		self.popup6.activated[str].connect(self.Vis9)
 		self.popup6.move(210,635)
-		
+
 		# set up lists for pop-ups
 		if App.ActiveDocument.Name == "Unnamed":
 			ap=App.ActiveDocument.Name
@@ -635,7 +635,7 @@ class Test(QtGui.QDialog):
 			ap=App.ActiveDocument.Name
 			exec("""d1=App.getDocument("{}").getObject("Cylinder")""".format(ap),globals())
 
-		list=[]	
+		list=[]
 		if a1==None:
 			print("Box doesn't exist")
 		elif Gui.Selection.isSelected(App.getDocument(ap).getObject("Box")) == True:
@@ -784,10 +784,10 @@ class Test(QtGui.QDialog):
 		cancelButton.clicked.connect(self.onCancel)
 		cancelButton.setAutoDefault(True)
 		cancelButton.move(500, 950)
-        
+
 		# OK button
 		okButton = QtGui.QPushButton('OK', self)
-		okButton.clicked.connect(self.onOk)		
+		okButton.clicked.connect(self.onOk)
 		okButton.clicked.connect(self.OpenFile)
 		okButton.move(600, 950)
 
@@ -1104,7 +1104,7 @@ class Test(QtGui.QDialog):
 			self.Freq3.hide()
 			self.label132.hide()
 			self.label133.hide()
-			
+
 	def Vis7(self):
 		if self.popup20.currentText()=="true":
 			self.NumColor.show()
@@ -1167,14 +1167,14 @@ class Test(QtGui.QDialog):
 	def onCancel(self):
 		self.result			= userCancelled
 		self.close()
-      
+
 	def onReset1(self):
 		self.result         = userReset1
 		self.label2.setText("                                                                                                                  ", self)
 		print(listWOBJ)
 		listWOBJ.clear()
 		print(listWOBJ)
-		
+
 
 	def onOk(self):
 		self.result			= userOK
@@ -1189,8 +1189,8 @@ class Test(QtGui.QDialog):
 			else:
 				self.close()
 			n+=1
-            
-            
+
+
 userCancelled= "Cancelled"
 userOK= "OK"
 userReset1 = "Reset"
@@ -1247,18 +1247,18 @@ class FluidSimu(QtGui.QDialog):
 		self.Freq.setText("0.0")
 		self.Freq.setFixedWidth(90)
 		self.Freq.move(210,195)
-        
+
 		#Cancel button
 		cancelButton = QtGui.QPushButton('Cancel', self)
 		cancelButton.clicked.connect(self.onCancel)
 		cancelButton.setAutoDefault(True)
 		cancelButton.move(150, 250)
 		# OK button
-        
+
 		okButton = QtGui.QPushButton('OK', self)
 		okButton.clicked.connect(self.onOk)
 		okButton.move(260, 250)
-        
+
 
 	def onCancel(self):
 		self.result			= userCancelled
@@ -1269,7 +1269,7 @@ class FluidSimu(QtGui.QDialog):
 		self.close()
 
 userCancelled= "Cancelled"
-userOK= "OK"	
+userOK= "OK"
 
 
 #Tallies
@@ -1535,26 +1535,26 @@ Cell_Size: """+form.CellSix.text()+""" """+form.CellSiy.text()+""" """+form.Cell
 		test=os.remove(filename+".World")
 	a=str(a)
 	text="""VER: 1.1
- 
+
 =================================================
 _BEGIN_MODELSECTION_
- 
+
 NormalContactModel:   """+form.NCM.text()+"""
-TangetContactModel:   """+form.TCM.text()+""" 
-RollingContactModel:  """+form.RCM.text()+""" 
+TangetContactModel:   """+form.TCM.text()+"""
+RollingContactModel:  """+form.RCM.text()+"""
 CohesionContactModel: """+form.CCM.text()+"""
- 
+
 _END_MODELSECTION_
- 
+
 ParticleType:           """+form.ParticleType.text()+"""
 TimeStep: """+form.TimeStep.text()+"""
- 
+
 =================================================
- 
+
 =================================================
-             1_Geometrical-Information           
- 
- 
+             1_Geometrical-Information
+
+
 ---------------------------------------
  1.1_World_Objects
 ---------------------------------------
@@ -1593,12 +1593,12 @@ Number: """+a+"""
 		for n in range (0,a):
 			file.write(list10[n]+"\n")
 			n=n+1
-	
+
 	tell="""
 ---------------------------------------
 1.3_Volume_Objects_(index__name)
 ---------------------------------------
- 
+
 Number: """+por+"""
 
 """
@@ -1617,47 +1617,47 @@ Number: """+por+"""
 	gnee="""
 
 =================================================
- 
+
 =================================================
-              2_Simulation_Setup                
- 
+              2_Simulation_Setup
+
 Total_Time:  """+form.TotalT.text()+"""
 ForceField(cm/s): """+form.ForceFx.text()+""" """+form.ForceFy.text()+""" """+form.ForceFz.text()+"""
 ParticleRotation: """+form.label36.text()+"""
 VelLimit: """+form.label37.text()+"""
 ValidZone: """+form.label38.text()+""" """+shunkan+"""
 =================================================
- 
- 
+
+
 =================================================
-             3_BroadPhase-(Boxing)         
- 
-GridPerSize: """+form.label45.text()+""" 
+             3_BroadPhase-(Boxing)
+
+GridPerSize: """+form.label45.text()+"""
 OverRide:    """+form.label46.text()+"""
 """+apophis+"""
- 
+
 =================================================
- 
- 
+
+
 =================================================
-              4_Inital_Particle-Setup         
- 
+              4_Inital_Particle-Setup
+
 ReadFromFile:                     """+form.label56.text()+"""
 StartType:     """+form.StartT.text()+"""
-RandomOrient:         """+form.label57.text()+""" 
+RandomOrient:         """+form.label57.text()+"""
 RandomStartVel: """+form.label58.text()+"""
 launchVel(cm/s):  """+form.LaunchVx.text()+""" """+form.LaunchVy.text()+""" """+form.LaunchVz.text()+"""
-launchAVel: """+form.LaunchAVx.text()+""" """+form.LaunchAVy.text()+""" """+form.LaunchAVz.text()+""" 
-SpawnStart: """+form.SpawnSx.text()+""" """+form.SpawnSy.text()+""" """+form.SpawnSz.text()+""" 
+launchAVel: """+form.LaunchAVx.text()+""" """+form.LaunchAVy.text()+""" """+form.LaunchAVz.text()+"""
+SpawnStart: """+form.SpawnSx.text()+""" """+form.SpawnSy.text()+""" """+form.SpawnSz.text()+"""
 SpawnEnd    """+form.SpawnEx.text()+""" """+form.SpawnEy.text()+""" """+form.SpawnEz.text()+"""
- 
+
 =================================================
- 
- 
+
+
 =================================================
-              5_OutputOptions         
- 
-Display(0=type,1=vel(binsize),2=pen(binsize)):	"""+form.label73.text()+""" """+apo+""" 
+              5_OutputOptions
+
+Display(0=type,1=vel(binsize),2=pen(binsize)):	"""+form.label73.text()+""" """+apo+"""
 View: """+form.View.text()+"""
 Cut """+form.label75.text()+""" """+apop+"""
 FPS: """+form.FPS.text()+"""
@@ -1665,16 +1665,16 @@ GLDebug: """+form.GLDebug.text()+"""
 FileWrite: """+form.label76.text()+""" """+apoph+"""
 SnapShotWrite: """+form.label77.text()+""" """+apophi+"""
 EnergyDiss """+form.label78.text()+"""
-EnergySpectra """+form.label81.text()+""" 
-ContactInfo """+form.label82.text()+""" 
-VolCellInfo: """+form.label83.text()+""" 
- 
+EnergySpectra """+form.label81.text()+"""
+ContactInfo """+form.label82.text()+"""
+VolCellInfo: """+form.label83.text()+"""
+
 =================================================
- 
- 
+
+
 =================================================
-              6_Tallies         
-  
+              6_Tallies
+
 Num_tallies: """+form.Type3.text()+"""
 """
 
@@ -1693,11 +1693,11 @@ file.write(pro2{}[0]
 			i+=1
 
 	trololo="""=================================================
- 
- 
+
+
 =================================================
-              7_Color_Options         
-  
+              7_Color_Options
+
 Custom_Color:       """+form.label89.text()+"""
 """
 
@@ -1716,7 +1716,7 @@ file.write(pro3{}[0]
 
 	xD="""Manual_Layer_Colors: """+form.label90.text()+""" """+apoi+"""
 =================================================
-  
+
 LOADPROFILE: """+form.LoadProfile.text()+"""
 """
 
@@ -1769,26 +1769,26 @@ Cell_Size: """+form.CellSix.text()+""" """+form.CellSiy.text()+""" """+form.Cell
 		test=os.remove("Project1.World")
 	a=str(a)
 	text="""VER: 1.1
- 
+
 =================================================
 _BEGIN_MODELSECTION_
- 
+
 NormalContactModel:   """+form.NCM.text()+"""
-TangetContactModel:   """+form.TCM.text()+""" 
-RollingContactModel:  """+form.RCM.text()+""" 
+TangetContactModel:   """+form.TCM.text()+"""
+RollingContactModel:  """+form.RCM.text()+"""
 CohesionContactModel: """+form.CCM.text()+"""
- 
+
 _END_MODELSECTION_
- 
+
 ParticleType:           """+form.ParticleType.text()+"""
 TimeStep: """+form.TimeStep.text()+"""
- 
+
 =================================================
- 
+
 =================================================
-             1_Geometrical-Information           
- 
- 
+             1_Geometrical-Information
+
+
 ---------------------------------------
  1.1_World_Objects
 ---------------------------------------
@@ -1804,7 +1804,7 @@ Number: """+alpha
 		b=len(listWOBJ)
 		for n in range (0,b):
 			file.write("""
-Index: 1 Name: """ + listWOBJ[n]+""" 
+Index: 1 Name: """ + listWOBJ[n]+"""
 """)
 			n=n+1
 
@@ -1828,12 +1828,12 @@ Number: """+a+"""
 		for n in range (0,a):
 			file.write(list10[n]+"\n")
 			n=n+1
-	
+
 	tell="""
 ---------------------------------------
 1.3_Volume_Objects_(index__name)
 ---------------------------------------
- 
+
 Number: """+por+"""
 
 """
@@ -1852,42 +1852,42 @@ Number: """+por+"""
 	gnee="""
 
 =================================================
- 
+
 =================================================
-              2_Simulation_Setup                
- 
+              2_Simulation_Setup
+
 Total_Time:  """+form.TotalT.text()+"""
 ForceField(cm/s): """+form.ForceFx.text()+""" """+form.ForceFy.text()+""" """+form.ForceFz.text()+"""
 ParticleRotation: """+form.label36.text()+"""
 VelLimit: """+form.label37.text()+"""
 ValidZone: """+form.label38.text()+""" """+shunkan+"""
 =================================================
- 
- 
+
+
 =================================================
-             3_BroadPhase-(Boxing)         
- 
-GridPerSize: """+form.label45.text()+""" 
+             3_BroadPhase-(Boxing)
+
+GridPerSize: """+form.label45.text()+"""
 OverRide:    """+form.label46.text()+"""
 """+apophis+"""
- 
+
 =================================================
- 
- 
+
+
 =================================================
-              4_Inital_Particle-Setup         
- 
+              4_Inital_Particle-Setup
+
 ReadFromFile:                     """+form.label56.text()+"""
 
 Path: """+name+"""
- 
+
 =================================================
- 
- 
+
+
 =================================================
-              5_OutputOptions         
- 
-Display(0=type,1=vel(binsize),2=pen(binsize)):	"""+form.label73.text()+""" """+apo+""" 
+              5_OutputOptions
+
+Display(0=type,1=vel(binsize),2=pen(binsize)):	"""+form.label73.text()+""" """+apo+"""
 View: """+form.View.text()+"""
 Cut """+form.label75.text()+""" """+apop+"""
 FPS: """+form.FPS.text()+"""
@@ -1895,16 +1895,16 @@ GLDebug: """+form.GLDebug.text()+"""
 FileWrite: """+form.label76.text()+""" """+apoph+"""
 SnapShotWrite: """+form.label77.text()+""" """+apophi+"""
 EnergyDiss """+form.label78.text()+"""
-EnergySpectra """+form.label81.text()+""" 
-ContactInfo """+form.label82.text()+""" 
-VolCellInfo: """+form.label83.text()+""" 
- 
+EnergySpectra """+form.label81.text()+"""
+ContactInfo """+form.label82.text()+"""
+VolCellInfo: """+form.label83.text()+"""
+
 =================================================
- 
- 
+
+
 =================================================
-              6_Tallies         
-  
+              6_Tallies
+
 Num_tallies: """+form.Type3.text()+"""
 """
 
@@ -1923,11 +1923,11 @@ file.write(pro2{}[0]
 			i+=1
 
 	trololo="""=================================================
- 
- 
+
+
 =================================================
-              7_Color_Options         
-  
+              7_Color_Options
+
 Custom_Color:       """+form.label89.text()+"""
 """
 
@@ -1946,7 +1946,7 @@ file.write(pro3{}[0]
 
 	xD="""Manual_Layer_Colors: """+form.label90.text()+""" """+apoi+"""
 =================================================
-  
+
 LOADPROFILE: """+form.LoadProfile.text()+"""
 """
 
@@ -1959,5 +1959,5 @@ if form.popup9.currentText()=="false":
 	Tr=trueWorld()
 else:
 	Tr=falseWorld()
-    
+
 Tr.exec_()
